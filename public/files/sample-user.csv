@@ -1,0 +1,11 @@
+チーム名・部署名（自由入力）,役職名（自由入力）,氏名,メールアドレス
+開発1チーム,上司,小野寺慎平,test01@example.com
+開発1チーム,トレーナー,山口陽輝,test02@example.com
+開発1チーム,メンター,阿部真弥,test03@example.com
+開発1チーム,トレーニー,本間俊平,test04@example.com
+開発1チーム,トレーニー,三浦杏斗,test05@mail.com
+営業Aチーム,OJTトレーナー,坂本,test06@example.com
+営業Aチーム,OJTトレーニー,佐藤郁美,test07@example.com
+営業Bチーム,OJTトレーニー,佐藤郁美,test08@example.com
+営業Bチーム,OJTトレーニー,佐藤郁美,test09@example.com
+営業Bチーム,OJTトレーニー,佐藤郁美,test10@example.com

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <g id="_レイヤー_1-2" data-name="レイヤー 1">
+    <g>
+      <rect width="32" height="32" fill="none" stroke-width="0"/>
+      <g>
+        <g>
+          <circle cx="4.22" cy="27.79" r="2.2" fill="#fdd000" stroke-width="0"/>
+          <circle cx="14.67" cy="17.42" r="2.2" fill="#fdd000" stroke-width="0"/>
+          <circle cx="27.78" cy="10.09" r="2.2" fill="#fdd000" stroke-width="0"/>
+          <rect x="2.71" y="22.24" width="13.28" height="1" transform="translate(-13.34 13.27) rotate(-45)" fill="#fdd000" stroke-width="0"/>
+          <rect x="14.94" y="12.89" width="13.28" height="1" transform="translate(-3.8 12.58) rotate(-30)" fill="#fdd000" stroke-width="0"/>
+        </g>
+        <g>
+          <circle cx="4.22" cy="21.91" r="2.2" fill="#00aebb" stroke-width="0"/>
+          <circle cx="14.67" cy="11.54" r="2.2" fill="#00aebb" stroke-width="0"/>
+          <circle cx="27.78" cy="4.21" r="2.2" fill="#00aebb" stroke-width="0"/>
+          <rect x="2.71" y="16.36" width="13.28" height="1" transform="translate(-9.18 11.55) rotate(-45)" fill="#00aebb" stroke-width="0"/>
+          <rect x="14.94" y="7.01" width="13.28" height="1" transform="translate(-.86 11.8) rotate(-30)" fill="#00aebb" stroke-width="0"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

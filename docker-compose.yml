@@ -1,0 +1,76 @@
+version: '3'
+
+networks:
+    sail:
+        driver: bridge
+
+services:
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: oseru-survey
+        env_file: ./.env
+        working_dir: /var/www/html
+        user: sail
+        volumes:
+            - ./:/var/www/html
+        ports:
+            - 8000:8000
+        depends_on:
+            - db
+            - selenium
+        networks:
+            - sail
+        command: php artisan serve --host=0.0.0.0 --port=8000
+
+    db:
+        image: mysql:8.0
+        env_file: ./.env
+        # environment:
+        #     - MYSQL_ROOT_PASSWORD=root
+        #     - MYSQL_DATABASE=${DB_DATABASE}
+        #     - MYSQL_USER=${DB_USERNAME}
+        #     - MYSQL_PASSWORD=${DB_PASSWORD}
+        #     - MYSQL_MAX_ALLOWED_PACKET=64M
+        ports:
+            - 3306:3306
+        volumes:
+            - ./mysql-data:/var/lib/mysql
+        networks:
+            - sail
+
+    db_test:
+        image: mysql:8.0
+        env_file:
+            - ./.env.testing
+        environment:
+            - MYSQL_ROOT_PASSWORD=root
+            - MYSQL_DATABASE=${DB_DATABASE}
+            - MYSQL_USER=${DB_USERNAME}
+            - MYSQL_PASSWORD=${DB_PASSWORD}
+            - MYSQL_MAX_ALLOWED_PACKET=64M
+        ports:
+            - 3000:3306
+        volumes:
+            - ./mysql-test-data:/var/lib/mysql
+        networks:
+            - sail
+
+    mailhog:
+        image: mailhog/mailhog
+        container_name: mailhog
+        ports:
+            - "1025:1025"
+            - "8025:8025"
+        networks:
+            - sail
+
+    selenium:
+        image: 'seleniarm/standalone-chromium'
+        volumes:
+            - '/dev/shm:/dev/shm'
+        ports:
+            - "4444:4444"
+        networks:
+            - sail
